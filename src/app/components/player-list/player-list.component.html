@@ -1,0 +1,60 @@
+<div class="list row">
+  <div class="col-md-8">
+    <div class="input-group mb-3">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Search by last name"
+        [(ngModel)]="name"
+      />
+      <div class="input-group-append">
+        <button
+          class="btn btn-outline-secondary"
+          type="button"
+          (click)="searchlastName()"
+        >
+          Search
+        </button>
+      </div>
+    </div>
+    <div class="input-group mb-3">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Search by team"
+        [(ngModel)]="team"
+      />
+      <div class="input-group-append">
+        <button
+          class="btn btn-outline-secondary"
+          type="button"
+          (click)="searchteam()"
+        >
+          Search
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <h4>List of players</h4>
+    <ul class="list-group">
+      <li
+        class="list-group-item"
+        *ngFor="let player of players; let i = index"
+        [class.active]="i == currentIndex"
+        (click)="setActivePlayer(player, i)"
+      >
+      {{ player.firstName }} {{ player.lastName }}
+      </li>
+    </ul>
+    <button class="m-3 btn btn-sm btn-danger" (click)="removeAllPlayers()">
+      Remove all
+    </button>
+  </div>
+  <div class="col-md-6">
+    <app-player-profile
+      [viewMode]="true"
+      [currentPlayer]="currentPlayer"
+    ></app-player-profile>
+  </div>
+</div>

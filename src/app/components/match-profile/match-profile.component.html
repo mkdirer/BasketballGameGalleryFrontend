@@ -1,0 +1,156 @@
+<div *ngIf="viewMode; else editable" class="container">
+  <div class="row">
+    <div class="col-md-8">
+      <div *ngIf="currentMatch.id">
+        <h4>Basketball Match</h4>
+        <div>
+          <label><strong>Date:</strong></label> {{ currentMatch.date }}
+        </div>
+        <div>
+          <label><strong>Result:</strong></label> {{ currentMatch.result }}
+        </div>
+        <div>
+          <label><strong>Home Team:</strong></label> {{ currentMatch.homeTeam }}
+        </div>
+        <div>
+          <label><strong>Visiting Team:</strong></label> {{ currentMatch.visitTeam }}
+        </div>
+        <div>
+          <label><strong>Visiting Shooting Guard:</strong></label> {{ currentMatch.visitShootingGuard }}
+        </div>
+        <div>
+          <label><strong>Visiting Small Forward:</strong></label> {{ currentMatch.visitSmallForward }}
+        </div>
+        <div>
+          <label><strong>Visiting Power Forward:</strong></label> {{ currentMatch.visitPowerForward }}
+        </div>
+        <div>
+          <label><strong>Visiting Center:</strong></label> {{ currentMatch.visitCenter }}
+        </div>
+        <div>
+          <label><strong>Home Point Guard:</strong></label> {{ currentMatch.homePointGuard }}
+        </div>
+        <div>
+          <label><strong>Home Shooting Guard:</strong></label> {{ currentMatch.homeShootingGuard }}
+        </div>
+        <div>
+          <label><strong>Home Small Forward:</strong></label> {{ currentMatch.homeSmallForward }}
+        </div>
+        <div>
+          <label><strong>Home Power Forward:</strong></label> {{ currentMatch.homePowerForward }}
+        </div>
+        <div>
+          <label><strong>Home Center:</strong></label> {{ currentMatch.homeCenter }}
+        </div>
+        <a class="badge badge-warning" routerLink="/matches/{{ currentMatch.id }}">
+          Edit
+        </a>
+      </div>
+      <div *ngIf="!currentMatch">
+        <br />
+        <p>Please select a match...</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="court-container">
+        <img class="court-image" src="assets/basketball_court.png" alt="Basketball Court">
+        <div class="player-marker home-point-guard">HPG: {{ currentMatch.homePointGuard }}</div>
+        <div class="player-marker home-shooting-guard">HSG: {{ currentMatch.homeShootingGuard }}</div>
+        <div class="player-marker home-small-forward">HSF: {{ currentMatch.homeSmallForward }}</div>
+        <div class="player-marker home-power-forward">HPF: {{ currentMatch.homePowerForward }}</div>
+        <div class="player-marker home-center">HC: {{ currentMatch.homeCenter }}</div>
+        <div class="player-marker visite-point-guard">VPG: {{ currentMatch.visitPointGuard }}</div>
+        <div class="player-marker visite-shooting-guard">VSG: {{ currentMatch.visitShootingGuard }}</div>
+        <div class="player-marker visite-small-forward">VSF: {{ currentMatch.visitSmallForward }}</div>
+        <div class="player-marker visite-power-forward">VPF: {{ currentMatch.visitPowerForward }}</div>
+        <div class="player-marker visite-center">VC: {{ currentMatch.visitCenter }}</div>
+      </div>
+    </div>
+  </div>
+</div>
+<ng-template #editable>
+  <div *ngIf="currentMatch.id" class="edit-form">
+    <h4>Match</h4>
+    <form>
+      <div class="form-group">
+        <label for="date">Date</label>
+        <input type="text" class="form-control" id="date" required [(ngModel)]="currentMatch.date" name="date" />
+      </div>
+      <div class="form-group">
+        <label for="result">Result</label>
+        <input type="text" class="form-control" id="result" required [(ngModel)]="currentMatch.result" name="result" />
+      </div>
+      <div class="form-group">
+        <label for="homeTeam">Home Team</label>
+        <input type="text" class="form-control" id="homeTeam" required [(ngModel)]="currentMatch.homeTeam"
+          name="homeTeam" />
+      </div>
+      <div class="form-group">
+        <label for="visitTeam">Visiting Team</label>
+        <input type="text" class="form-control" id="visitTeam" required [(ngModel)]="currentMatch.visitTeam"
+          name="visitTeam" />
+      </div>
+      <div class="form-group">
+        <label for="visitPointGuard">Visiting Point Guard</label>
+        <input type="text" class="form-control" id="visitPointGuard" required [(ngModel)]="currentMatch.visitPointGuard"
+          name="visitPointGuard" />
+      </div>
+      <div class="form-group">
+        <label for="visitShootingGuard">Visiting Shooting Guard</label>
+        <input type="text" class="form-control" id="visitShootingGuard" required
+          [(ngModel)]="currentMatch.visitShootingGuard" name="visitShootingGuard" />
+      </div>
+      <div class="form-group">
+        <label for="visitSmallForward">Visiting Small Forward</label>
+        <input type="text" class="form-control" id="visitSmallForward" required
+          [(ngModel)]="currentMatch.visitSmallForward" name="visitSmallForward" />
+      </div>
+      <div class="form-group">
+        <label for="visitPowerForward">Visiting Power Forward</label>
+        <input type="text" class="form-control" id="visitPowerForward" required
+          [(ngModel)]="currentMatch.visitPowerForward" name="visitPowerForward" />
+      </div>
+      <div class="form-group">
+        <label for="visitCenter">Visiting Center</label>
+        <input type="text" class="form-control" id="visitCenter" required [(ngModel)]="currentMatch.visitCenter"
+          name="visitCenter" />
+      </div>
+      <div class="form-group">
+        <label for="homePointGuard">Home Point Guard</label>
+        <input type="text" class="form-control" id="homePointGuard" required [(ngModel)]="currentMatch.homePointGuard"
+          name="homePointGuard" />
+      </div>
+      <div class="form-group">
+        <label for="homeShootingGuard">Home Shooting Guard</label>
+        <input type="text" class="form-control" id="homeShootingGuard" required
+          [(ngModel)]="currentMatch.homeShootingGuard" name="homeShootingGuard" />
+      </div>
+      <div class="form-group">
+        <label for="homeSmallForward">Home Small Forward</label>
+        <input type="text" class="form-control" id="homeSmallForward" required
+          [(ngModel)]="currentMatch.homeSmallForward" name="homeSmallForward" />
+      </div>
+      <div class="form-group">
+        <label for="homePowerForward">Home Power Forward</label>
+        <input type="text" class="form-control" id="homePowerForward" required
+          [(ngModel)]="currentMatch.homePowerForward" name="homePowerForward" />
+      </div>
+      <div class="form-group">
+        <label for="homeCenter">Home Center</label>
+        <input type="text" class="form-control" id="homeCenter" required [(ngModel)]="currentMatch.homeCenter"
+          name="homeCenter" />
+      </div>
+    </form>
+    <button class="badge badge-danger mr-2" (click)="deleteMatch()">
+      Delete
+    </button>
+    <button type="submit" class="badge badge-success mb-2" (click)="updateMatch()">
+      Update
+    </button>
+    <p>{{ message }}</p>
+  </div>
+  <div *ngIf="!currentMatch.id">
+    <br />
+    <p>Loading...</p>
+  </div>
+</ng-template>

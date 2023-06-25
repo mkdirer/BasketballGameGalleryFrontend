@@ -1,0 +1,72 @@
+.edit-form {
+  max-width: 400px;
+  margin: auto;
+}
+
+.court-container {
+  position: relative;
+  width: 100%;
+}
+
+.court-image {
+  width: 300%;
+  height: 300%;
+  opacity: 0.6;
+}
+
+.player-marker {
+  position: absolute;
+  font-weight: bold;
+  font-size: 14px;
+  color: black;
+}
+
+.home-point-guard {
+  top: 260px;
+  left: 180px;
+}
+
+.home-shooting-guard {
+  top: 230px;
+  left: 270px;
+}
+
+.home-small-forward {
+  top: 68px;
+  left: 80px;
+}
+
+.home-power-forward {
+  top: 90px;
+  left: 290px;
+}
+
+.home-center {
+  top: 140px;
+  left: 97px;
+}
+
+.visite-point-guard {
+  top: 410px; /* Zmieniona pozycja dla odbicia */
+  left: 180px;
+}
+
+.visite-shooting-guard {
+  top: 440px; /* Zmieniona pozycja dla odbicia */
+  left: 270px;
+}
+
+.visite-small-forward {
+  top: 602px; /* Zmieniona pozycja dla odbicia */
+  left: 80px;
+}
+
+.visite-power-forward {
+  top: 580px; /* Zmieniona pozycja dla odbicia */
+  left: 290px;
+}
+
+.visite-center {
+  top: 530px; /* Zmieniona pozycja dla odbicia */
+  left: 97px;
+}

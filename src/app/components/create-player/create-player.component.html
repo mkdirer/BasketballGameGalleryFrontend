@@ -1,0 +1,55 @@
+<div>
+  <div class="submit-form">
+      <div *ngIf="!submitted">
+      <div class="form-group">
+          <label for="firstName">Firstname</label>
+          <input
+          type="text"
+          class="form-control"
+          id="firstName"
+          required
+          [(ngModel)]="player.firstName"
+          name="firstName"
+          />
+      </div>
+      <div class="form-group">
+          <label for="lastName">Surname</label>
+          <input
+          type="text"
+          class="form-control"
+          id="lastName"
+          required
+          [(ngModel)]="player.lastName"
+          name="lastName"
+          />
+      </div>
+      <div class="form-group">
+          <label for="age">Age</label>
+          <input
+          type="number"
+          class="form-control"
+          id="age"
+          required
+          [(ngModel)]="player.age"
+          name="age"
+          />
+      </div>
+      <div class="form-group">
+          <label for="team">Team</label>
+          <input
+          type="text"
+          class="form-control"
+          id="team"
+          required
+          [(ngModel)]="player.team"
+          name="team"
+          />
+      </div>
+      <button (click)="savePlayer()" class="btn btn-success">Add</button>
+      </div>
+      <div *ngIf="submitted">
+      <h4>Player added successfully!</h4>
+      <button class="btn btn-success" (click)="newPlayer()">Add new</button>
+      </div>
+  </div>
+</div>

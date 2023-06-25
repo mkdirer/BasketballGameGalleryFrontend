@@ -1,0 +1,23 @@
+<div>
+  <div class="submit-form">
+    <div *ngIf="!submitted">
+      <div class="form-group">
+        <label for="name">Team Name</label>
+        <input type="text" class="form-control" id="name" required [(ngModel)]="team.name" name="name" />
+      </div>
+      <div class="form-group">
+        <label for="country">Country</label>
+        <input type="text" class="form-control" id="country" required [(ngModel)]="team.country" name="country" />
+      </div>
+      <div class="form-group">
+        <label for="league">League</label>
+        <input type="text" class="form-control" id="league" required [(ngModel)]="team.league" name="league" />
+      </div>
+      <button (click)="saveTeam()" class="btn btn-success">Add</button>
+    </div>
+    <div *ngIf="submitted">
+      <h4>Successfully added new club!</h4>
+      <button class="btn btn-success" (click)="newTeam()">Dodaj nowy</button>
+    </div>
+  </div>
+</div>

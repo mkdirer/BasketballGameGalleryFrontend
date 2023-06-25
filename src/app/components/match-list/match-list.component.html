@@ -1,0 +1,27 @@
+<div class="list row">
+  <div class="col-md-9">
+    <div class="input-group mb-3">
+      <input type="text" class="form-control" placeholder="Search by team" [(ngModel)]="team" />
+      <div class="input-group-append">
+        <button class="btn btn-outline-secondary" type="button" (click)="searchteam()">
+          Search
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <h4>List of basketball matches</h4>
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let match of matchs; let i = index" [class.active]="i == currentIndex"
+        (click)="setActiveMatch(match, i)">
+        {{ match.homeTeam }} {{ match.result }} {{ match.visitTeam }} ({{ match.date }})
+      </li>
+    </ul>
+    <button class="m-3 btn btn-sm btn-danger" (click)="removeAllMatchs()">
+      Remove all
+    </button>
+  </div>
+  <div class="col-md-8">
+    <app-match-profile [viewMode]="true" [currentMatch]="currentMatch"></app-match-profile>
+  </div>
+</div>

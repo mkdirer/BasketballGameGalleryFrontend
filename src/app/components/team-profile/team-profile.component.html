@@ -1,0 +1,78 @@
+<div *ngIf="viewMode; else editable">
+  <div *ngIf="currentTeam.id">
+    <h4>Team</h4>
+    <div>
+      <label><strong>Name:</strong></label> {{ currentTeam.name }}
+    </div>
+    <div>
+      <label><strong>Country:</strong></label>
+      {{ currentTeam.country }}
+    </div>
+    <div>
+      <label><strong>League:</strong></label>
+      {{ currentTeam.league }}
+    </div>
+    <a
+      class="badge badge-warning"
+      routerLink="/teams/{{ currentTeam.id }}"
+    >
+      Edit
+    </a>
+  </div>
+  <div *ngIf="!currentTeam">
+    <br />
+    <p>Please select a team...</p>
+  </div>
+</div>
+<ng-template #editable>
+  <div *ngIf="currentTeam.id" class="edit-form">
+    <h4>Team</h4>
+    <form>
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          [(ngModel)]="currentTeam.name"
+          name="name"
+        />
+      </div>
+      <div class="form-group">
+        <label for="country">Country</label>
+        <input
+          type="text"
+          class="form-control"
+          id="country"
+          [(ngModel)]="currentTeam.country"
+          name="country"
+        />
+      </div>
+      <div class="form-group">
+          <label for="league">League</label>
+          <input
+            type="text"
+            class="form-control"
+            id="league"
+            [(ngModel)]="currentTeam.league"
+            name="league"
+          />
+        </div>
+    </form>
+    <button class="badge badge-danger mr-2" (click)="deleteTeam()">
+      Delete
+    </button>
+    <button
+      type="submit"
+      class="badge badge-success mb-2"
+      (click)="updateTeam()"
+    >
+      Update
+    </button>
+    <p>{{ message }}</p>
+  </div>
+  <div *ngIf="!currentTeam.id">
+    <br />
+    <p>Loading...</p>
+  </div>
+</ng-template>

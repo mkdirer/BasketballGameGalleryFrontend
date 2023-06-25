@@ -1,0 +1,165 @@
+<div>
+  <div class="submit-form">
+      <div *ngIf="!submitted">
+      <div class="form-group">
+          <label for="date">Date</label>
+          <input
+          type="text"
+          class="form-control"
+          id="date"
+          required
+          [(ngModel)]="match.date"
+          name="date"
+          />
+      </div>
+      <div class="form-group">
+          <label for="result">Result</label>
+          <input
+          type="text"
+          class="form-control"
+          id="result"
+          required
+          [(ngModel)]="match.result"
+          name="result"
+          />
+      </div>
+        <div class="form-group">
+          <label for="homeTeam">Home Team</label>
+          <input
+          type="text"
+          class="form-control"
+          id="homeTeam"
+          required
+          [(ngModel)]="match.homeTeam"
+          name="homeTeam"
+          />
+      </div>
+      <div class="form-group">
+          <label for="visitTeam">Visiting Team</label>
+          <input
+          type="text"
+          class="form-control"
+          id="visitTeam"
+          required
+          [(ngModel)]="match.visitTeam"
+          name="visitTeam"
+          />
+      </div>
+      <div class="form-group">
+          <label for="visitPointGuard">visitPointGuard</label>
+          <input
+          type="text"
+          class="form-control"
+          id="visitPointGuard"
+          required
+          [(ngModel)]="match.visitPointGuard"
+          name="visitPointGuard"
+          />
+      </div>
+      <div class="form-group">
+          <label for="visitShootingGuard">visitShootingGuard</label>
+          <input
+          type="text"
+          class="form-control"
+          id="visitShootingGuard"
+          required
+          [(ngModel)]="match.visitShootingGuard"
+          name="visitShootingGuard"
+          />
+      </div>
+      <div class="form-group">
+          <label for="visitSmallForward">visitSmallForward</label>
+          <input
+          type="text"
+          class="form-control"
+          id="visitSmallForward"
+          required
+          [(ngModel)]="match.visitSmallForward"
+          name="visitSmallForward"
+          />
+      </div>
+      <div class="form-group">
+          <label for="visitPowerForward">visitPowerForward</label>
+          <input
+          type="text"
+          class="form-control"
+          id="visitPowerForward"
+          required
+          [(ngModel)]="match.visitPowerForward"
+          name="visitPowerForward"
+          />
+      </div>
+      <div class="form-group">
+          <label for="visitCenter">visitCenter</label>
+          <input
+          type="text"
+          class="form-control"
+          id="visitCenter"
+          required
+          [(ngModel)]="match.visitCenter"
+          name="visitCenter"
+          />
+      </div>
+      <div class="form-group">
+          <label for="homePointGuard">homePointGuard</label>
+          <input
+          type="text"
+          class="form-control"
+          id="homePointGuard"
+          required
+          [(ngModel)]="match.homePointGuard"
+          name="homePointGuard"
+          />
+      </div>
+      <div class="form-group">
+          <label for="homeShootingGuard">homeShootingGuard</label>
+          <input
+          type="text"
+          class="form-control"
+          id="homeShootingGuard"
+          required
+          [(ngModel)]="match.homeShootingGuard"
+          name="homeShootingGuard"
+          />
+      </div>
+      <div class="form-group">
+          <label for="homeSmallForward">homeSmallForward</label>
+          <input
+          type="text"
+          class="form-control"
+          id="homeSmallForward"
+          required
+          [(ngModel)]="match.homeSmallForward"
+          name="homeSmallForward"
+          />
+      </div>
+      <div class="form-group">
+          <label for="homePowerForward">homePowerForward</label>
+          <input
+          type="text"
+          class="form-control"
+          id="homePowerForward"
+          required
+          [(ngModel)]="match.homePowerForward"
+          name="homePowerForward"
+          />
+      </div>
+      <div class="form-group">
+          <label for="homeCenter">homeCenter</label>
+          <input
+          type="text"
+          class="form-control"
+          id="homeCenter"
+          required
+          [(ngModel)]="match.homeCenter"
+          name="homeCenter"
+          />
+      </div>
+      <button (click)="saveMatch()" class="btn btn-success">Add</button>
+      </div>
+      <div *ngIf="submitted">
+      <h4>Pomyślnie dodano mecz!</h4>
+      <button class="btn btn-success" (click)="newMatch()">Add new</button>
+      </div>
+  </div>
+</div>
