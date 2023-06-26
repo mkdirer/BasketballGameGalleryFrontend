@@ -22,6 +22,8 @@ import { PlayerProfileComponent } from './components/player-profile/player-profi
 import { PlayerListComponent } from './components/player-list/player-list.component';
 import { CreatePlayerComponent } from './components/create-player/create-player.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { UsersProfileComponent } from './components/users-profile/users-profile.component';
+import { ModeratorsProfileComponent } from './components/moderators-profile/moderators-profile.component';
 
 @NgModule({
   declarations: [
@@ -34,14 +36,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatchListComponent,
     AdminPanelComponent,
     ModeratorPanelComponent,
-    UserPanelComponent,
     HomeComponent,
     LoginComponent,
     ProfileComponent,
     RegisterComponent,
     PlayerProfileComponent,
     PlayerListComponent,
-    CreatePlayerComponent
+    CreatePlayerComponent,
+    UsersProfileComponent,
+    UserPanelComponent,
+    ModeratorsProfileComponent
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,4 @@
-<div *ngIf="viewMode; else editable" class="container">
+<div *ngIf="viewMode; else editable" class="team-details container">
   <div class="row">
     <div class="col-md-8">
       <div *ngIf="currentMatch.id">
@@ -42,7 +42,7 @@
         <div>
           <label><strong>Home Center:</strong></label> {{ currentMatch.homeCenter }}
         </div>
-        <a class="badge badge-warning" routerLink="/matches/{{ currentMatch.id }}">
+        <a class="edit-link badge badge-warning" routerLink="/matches/{{ currentMatch.id }}">
           Edit
         </a>
       </div>
@@ -54,16 +54,46 @@
     <div class="col-md-4">
       <div class="court-container">
         <img class="court-image" src="assets/basketball_court.png" alt="Basketball Court">
-        <div class="player-marker home-point-guard">HPG: {{ currentMatch.homePointGuard }}</div>
-        <div class="player-marker home-shooting-guard">HSG: {{ currentMatch.homeShootingGuard }}</div>
-        <div class="player-marker home-small-forward">HSF: {{ currentMatch.homeSmallForward }}</div>
-        <div class="player-marker home-power-forward">HPF: {{ currentMatch.homePowerForward }}</div>
-        <div class="player-marker home-center">HC: {{ currentMatch.homeCenter }}</div>
-        <div class="player-marker visite-point-guard">VPG: {{ currentMatch.visitPointGuard }}</div>
-        <div class="player-marker visite-shooting-guard">VSG: {{ currentMatch.visitShootingGuard }}</div>
-        <div class="player-marker visite-small-forward">VSF: {{ currentMatch.visitSmallForward }}</div>
-        <div class="player-marker visite-power-forward">VPF: {{ currentMatch.visitPowerForward }}</div>
-        <div class="player-marker visite-center">VC: {{ currentMatch.visitCenter }}</div>
+        <div class="player-marker home-point-guard">
+          <div class="player-shortcut">HPG</div>
+          {{ currentMatch.homePointGuard }}
+        </div>
+        <div class="player-marker home-shooting-guard">
+          <div class="player-shortcut">HSG</div>
+          {{ currentMatch.homeShootingGuard }}
+        </div>
+        <div class="player-marker home-small-forward">
+          <div class="player-shortcut">HSF</div>
+          {{ currentMatch.homeSmallForward }}
+        </div>
+        <div class="player-marker home-power-forward">
+          <div class="player-shortcut">HPF</div>
+          {{ currentMatch.homePowerForward }}
+        </div>
+        <div class="player-marker home-center">
+          <div class="player-shortcut">HC</div>
+          {{ currentMatch.homeCenter }}
+        </div>
+        <div class="player-marker visite-point-guard">
+          <div class="player-shortcut">VPG</div>
+          {{ currentMatch.visitPointGuard }}
+        </div>
+        <div class="player-marker visite-shooting-guard">
+          <div class="player-shortcut">VSG</div>
+          {{ currentMatch.visitShootingGuard }}
+        </div>
+        <div class="player-marker visite-small-forward">
+          <div class="player-shortcut">VSF</div>
+          {{ currentMatch.visitSmallForward }}
+        </div>
+        <div class="player-marker visite-power-forward">
+          <div class="player-shortcut">VPF</div>
+          {{ currentMatch.visitPowerForward }}
+        </div>
+        <div class="player-marker visite-center">
+          <div class="player-shortcut">VC</div>
+          {{ currentMatch.visitCenter }}
+        </div>
       </div>
     </div>
   </div>

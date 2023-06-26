@@ -7,9 +7,11 @@ import { TokenService } from './service/main_service/token.service';
 })
 export class AppComponent {
   private accessRights: string[] = [];
+  showAdminFiller = false;
   isLoggedIn = false;
   showAdminBoard = false;
   showModeratorBoard = false;
+  showUserBoard = false;
   username?: string;
   constructor(private tokenService: TokenService) { }
   ngOnInit(): void {
@@ -17,8 +19,9 @@ export class AppComponent {
     if (this.isLoggedIn) {
       const user = this.tokenService.getUser();
       this.accessRights = user.accessRights;
-      this.showAdminBoard = this.accessRights.includes('ADMIN_ACCESS_RIGHT');
-      this.showModeratorBoard = this.accessRights.includes('MODERATOR_ACCESS_RIGHT');
+      this.showUserBoard = this.accessRights.includes('ROLE_USER');
+      this.showAdminBoard = this.accessRights.includes('ROLE_ADMIN');
+      this.showModeratorBoard = this.accessRights.includes('ROLE_MODERATOR');
       this.username = user.username;
     }
   }

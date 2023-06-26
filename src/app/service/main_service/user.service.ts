@@ -22,21 +22,21 @@ export class UserService {
   }
 
   get(id: any): Observable<User> {
-    return this.http.get(`${API_URL}/${id}`);
+    return this.http.get(`${API_URL}/user/${id}`);
   }
 
   update(id: any, data: any): Observable<any> {
-    return this.http.put(`${API_URL}/${id}`, data);
+    return this.http.put(`${API_URL}/user/${id}`, data);
   }
 
   delete(id: any): Observable<any> {
-    return this.http.delete(`${API_URL}/${id}`);
+    return this.http.delete(`${API_URL}/user/${id}`);
   }
 
   findByName(name: any, accessRight: any): Observable<User[]> {
-    return this.http.get<User[]>(`${API_URL}?name=${name}`);
+    return this.http.get<User[]>(`${API_URL}/users?username=${name}?role=${accessRight}`);
   }
   findByEmail(email: any, accessRight: any): Observable<User[]> {
-    return this.http.get<User[]>(`${API_URL}?email=${email}`);
+    return this.http.get<User[]>(`${API_URL}/users?email=${email}?role=${accessRight}`);
   }
 }

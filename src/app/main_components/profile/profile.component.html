@@ -1,25 +1,33 @@
-<div class="container" *ngIf="currentUser; else loggedOut">
-  <header class="jumbotron">
-    <h3>
-      User account <strong>{{ currentUser.username }}</strong>
+<div class="container" *ngIf="currentUser; else loggedOut"
+  style="background-color: #f2f2f2; padding: 20px; border: 1px solid #ccc; border-radius: 5px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
+  <header class="jumbotron"
+    style="background-color: #007bff; padding: 10px; margin-bottom: 20px; color: #fff; text-align: center;">
+    <h3 style="font-weight: bold;">
+      User account <strong style="color: #fff;">{{ currentUser.username }}</strong>
     </h3>
   </header>
-  <p>
+  <!-- <p>
     <strong>Token:</strong>
-    {{ currentUser.accessToken.substring(0, 20) }} ...
-    {{ currentUser.accessToken.substr(currentUser.accessToken.length - 20) }}
-  </p>
+    <span class="token-text"
+      style="background-color: #fff; padding: 5px; border: 1px solid #ccc; border-radius: 3px; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);">
+      {{ currentUser.accessToken.substring(0, 20) }} ...
+      {{ currentUser.accessToken.substr(currentUser.accessToken.length - 20) }}
+    </span>
+  </p> -->
   <p>
     <strong>Email:</strong>
-    {{ currentUser.email }}
+    <span
+      style="background-color: #fff; padding: 5px; border: 1px solid #ccc; border-radius: 3px; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);">
+      {{ currentUser.email }}</span>
   </p>
   <strong>Role:</strong>
   <ul>
-    <li *ngFor="let role of currentUser.accessRights">
+    <li *ngFor="let role of currentUser.accessRights"
+      style="margin-bottom: 5px; color: #007bff; cursor: pointer; transition: color 0.3s;">
       {{ role }}
     </li>
   </ul>
 </div>
 <ng-template #loggedOut>
-  Please login.
+  <p style="font-weight: bold; text-align: center; margin-top: 20px; font-size: 18px;">Please login.</p>
 </ng-template>

@@ -1,43 +1,27 @@
 <div class="list row">
   <div class="col-md-8">
     <div class="input-group mb-3">
-      <input
-        type="text"
-        class="form-control"
-        placeholder="Search by name"
-        [(ngModel)]="name"
-      />
+      <input type="text" class="form-control search-input" placeholder="Search by name" [(ngModel)]="name" />
       <div class="input-group-append">
-        <button
-          class="btn btn-outline-secondary"
-          type="button"
-          (click)="searchname()"
-        >
+        <button class="btn btn-outline-secondary search-button" type="button" (click)="searchname()">
           Search
         </button>
       </div>
     </div>
   </div>
   <div class="col-md-6">
-    <h4>List of teams</h4>
+    <h4 style="color: #333; font-weight: bold;">List of teams</h4>
     <ul class="list-group">
-      <li
-        class="list-group-item"
-        *ngFor="let team of teams; let i = index"
-        [class.active]="i == currentIndex"
-        (click)="setActiveTeam(team, i)"
-      >
+      <li class="list-group-item" *ngFor="let team of teams; let i = index" [class.active]="i == currentIndex"
+        (click)="setActiveTeam(team, i)" style="cursor: pointer; transition: background-color 0.3s ease;">
         {{ team.name }}
       </li>
     </ul>
-    <button class="m-3 btn btn-sm btn-danger" (click)="removeAllTeams()">
+    <button class="m-3 btn btn-danger" (click)="removeAllTeams()" style="font-weight: bold;">
       Remove all
     </button>
   </div>
   <div class="col-md-6">
-    <app-team-profile
-      [viewMode]="true"
-      [currentTeam]="currentTeam"
-    ></app-team-profile>
+    <app-team-profile [viewMode]="true" [currentTeam]="currentTeam"></app-team-profile>
   </div>
 </div>

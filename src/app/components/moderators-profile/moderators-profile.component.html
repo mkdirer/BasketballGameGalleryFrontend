@@ -1,0 +1,25 @@
+<div *ngIf="viewMode">
+  <div *ngIf="currentUser.id" class="profile-details">
+    <h4 class="profile-heading">Moderator</h4>
+    <div class="profile-info">
+      <label><strong>Name:</strong></label> {{ currentUser.username }}
+    </div>
+    <div class="profile-info">
+      <label><strong>Email:</strong></label>
+      {{ currentUser.email }}
+    </div>
+    <div *ngIf="currentUser.id" class="edit-form">
+      <button type="submit" class="delete-button" (click)="deleteUser()">
+        Delete
+      </button>
+      <button type="submit" class="update-button" (click)="updateUser('user')">
+        To User
+      </button>
+      <p>{{ message }}</p>
+    </div>
+  </div>
+  <div *ngIf="!currentUser">
+    <br />
+    <p>Please select a moderator...</p>
+  </div>
+</div>

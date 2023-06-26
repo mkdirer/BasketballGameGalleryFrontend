@@ -1,5 +1,42 @@
-.list {
-  text-align: left;
-  max-width: 750px;
-  margin: auto;
+.search-input {
+  border-radius: 5px;
+  border-color: #ccc;
+  padding: 10px;
+  font-size: 16px;
 }
+
+.search-button {
+  border-radius: 5px;
+  border-color: #ccc;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+  background-color: #ccc;
+}
+
+.list-group-item {
+  border-radius: 5px;
+  border-color: #ccc;
+  transition: background-color 0.3s ease;
+}
+
+.list-group-item.active {
+  background-color: #3d3e92;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  border-color: #dc3545;
+  transition: background-color 0.3s ease;
+}
+
+.btn-danger:hover {
+  background-color: #c82333;
+}
+
+h4 {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+

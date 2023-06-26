@@ -1,0 +1,46 @@
+<div *ngIf="viewMode">
+  <div *ngIf="currentUser.id" class="profile-details">
+    <h4 class="profile-heading">User</h4>
+    <div class="profile-info">
+      <label><strong>Name:</strong></label> {{ currentUser.username }}
+    </div>
+    <div class="profile-info">
+      <label><strong>Email:</strong></label>
+      {{ currentUser.email }}
+    </div>
+    <div *ngIf="currentUser.id" class="edit-form">
+      <!-- {{ currentUser.id }} <br> {{ isAdmin }} <br> {{ isModerator }} <br> {{ isUser }} <br>
+      {{currentUser?.accessRights?.includes('ROLE_USER')}} -->
+      <button type="submit" class="delete-button" (click)="deleteUser()">
+        Delete
+      </button>
+      <button class="update-button" (click)="updateUser('moderator')">
+        To Moderator
+      </button>
+      <p>{{ message }}</p>
+    </div>
+    <!-- <a class="badge badge-warning" routerLink="/teams/{{ currentUser.id }}">
+      Edit
+    </a> -->
+  </div>
+  <div *ngIf="!currentUser">
+    <br />
+    <p>Please select a user...</p>
+  </div>
+</div>
+<!-- <ng-template #editable>
+  <div *ngIf="currentUser.id" class="edit-form">
+    <h4>Person</h4>
+    <button class="badge badge-danger mr-2" (click)="deleteUser()">
+      Delete
+    </button>
+    <button type="submit" class="badge badge-success mb-2" (click)="updateUser('user')">
+      Update
+    </button>
+    <p>{{ message }}</p>
+  </div>
+  <div *ngIf="!currentUser.id">
+    <br />
+    <p>Loading...</p>
+  </div>
+</ng-template> -->

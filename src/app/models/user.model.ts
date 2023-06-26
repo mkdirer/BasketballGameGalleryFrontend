@@ -1,6 +1,7 @@
+import { AccessRight } from './access-right.model';
 export class User {
   id?: any;
-  name?: string;
+  username?: string;
   email?: string;
-  accessRights?: string[];
+  accessRights?: AccessRight[];
 }
