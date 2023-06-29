@@ -2,7 +2,7 @@ import { User } from './../../models/user.model';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-export const API_URL = 'http://localhost:8080/api/test';
+export const API_URL = 'https://backend-basketball-game-gallery.onrender.com/api/test';
 @Injectable({
   providedIn: 'root'
 })

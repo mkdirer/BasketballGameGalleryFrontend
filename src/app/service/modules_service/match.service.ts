@@ -2,7 +2,7 @@ import { Match } from './../../models/match.model';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-export const baseUrl = 'http://localhost:8080/api/matches';
+export const baseUrl = 'https://backend-basketball-game-gallery.onrender.com/api/matches';
 
 @Injectable({
   providedIn: 'root'

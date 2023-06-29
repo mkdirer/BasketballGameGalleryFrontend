@@ -2,7 +2,7 @@ import { Team } from './../../models/team.model';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-export const baseUrl = 'http://localhost:8080/api/teams';
+export const baseUrl = 'https://backend-basketball-game-gallery.onrender.com/api/teams';
 
 @Injectable({
   providedIn: 'root'
