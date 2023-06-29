@@ -40,53 +40,53 @@
 }
 
 .home-point-guard {
-  top: 260px;
-  left: 180px;
+  top: 345px;
+  left: 235px;
 }
 
 .home-shooting-guard {
-  top: 230px;
-  left: 270px;
+  top: 310px;
+  left: 360px;
 }
 
 .home-small-forward {
-  top: 68px;
-  left: 80px;
+  top: 100px;
+  left: 100px;
 }
 
 .home-power-forward {
-  top: 90px;
-  left: 290px;
+  top: 120px;
+  left: 380px;
 }
 
 .home-center {
-  top: 140px;
-  left: 97px;
+  top: 180px;
+  left: 125px;
 }
 
 .visite-point-guard {
-  top: 410px;
-  left: 180px;
+  top: 545px;
+  left: 235px;
 }
 
 .visite-shooting-guard {
-  top: 440px;
-  left: 270px;
+  top: 583px;
+  left: 363px;
 }
 
 .visite-small-forward {
-  top: 602px;
-  left: 80px;
+  top: 790px;
+  left: 100px;
 }
 
 .visite-power-forward {
-  top: 580px;
-  left: 290px;
+  top: 758px;
+  left: 380px;
 }
 
 .visite-center {
-  top: 530px;
-  left: 97px;
+  top: 710px;
+  left: 125px;
 }
 
 .team-info {
