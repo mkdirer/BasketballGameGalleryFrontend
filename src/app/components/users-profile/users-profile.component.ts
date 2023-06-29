@@ -20,10 +20,6 @@ export class UsersProfileComponent implements OnInit{
 
   message = '';
   LoggedAccessRights: string[] = [];
-  // isLoggedIn = false;
-  // isAdmin = false;
-  // isModerator = false;
-  // isUser = false;
   constructor(
     private tokenService: TokenService,
     private userService: UserService,
@@ -33,16 +29,6 @@ export class UsersProfileComponent implements OnInit{
   ngOnInit(): void {
     if (!this.viewMode) {
       this.message = '';
-      // console.log(this.isAdmin, this.isModerator, this.isUser);
-      // const user = this.tokenService.getUser();
-      // this.LoggedAccessRights = user.accessRights;
-      // console.log(this.LoggedAccessRights);
-      // this.isAdmin = this.LoggedAccessRights.includes('ROLE_ADMIN');
-      // console.log(this.isAdmin);
-      // this.isModerator = this.LoggedAccessRights.includes('ROLE_MODERATOR');
-      // console.log(this.isModerator);
-      // this.isUser = this.LoggedAccessRights.includes('ROLE_USER');
-      // console.log(this.isUser);
       this.getUser(this.route.snapshot.params['id']);
     }
   }
@@ -87,20 +73,6 @@ export class UsersProfileComponent implements OnInit{
       });
     }
   }
-
-  // updateUser(accessRight: accessRight): void {
-  //   if (this.currentUser.id) {
-  //     this.userService.update(this.currentUser.id, this.currentUser)
-  //       .subscribe({
-  //         next: (res) => {
-  //           console.log(res);
-  //           this.message = res.message ? res.message : "The role has been successfully changed!";
-  //           this.router.navigate(['/home']);
-  //         },
-  //         error: (e) => console.error(e)
-  //       });
-  //   }
-  // }
 
   deleteUser(): void {
     if (this.currentUser.id) {

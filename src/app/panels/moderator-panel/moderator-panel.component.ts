@@ -38,28 +38,4 @@ export class ModeratorPanelComponent implements OnInit {
     this.currentUser = user;
     this.currentIndex = index;
   }
-
-  // removeAllUsers(): void {
-  //   this.userService.deleteAll()
-  //     .subscribe({
-  //       next: (res) => {
-  //         console.log(res);
-  //         this.refreshList();
-  //       },
-  //       error: (e) => console.error(e)
-  //     });
-  // }
-  // searchname(): void {
-  //   this.currentUser = {};
-  //   this.currentIndex = -1;
-  //   this.userService.findByName(this.name, "user")
-  //     .subscribe({
-  //       next: (data) => {
-  //         this.users = data;
-  //         console.log(data);
-  //       },
-  //       error: (e) => console.error(e)
-  //     });
-  // }
-
 }
